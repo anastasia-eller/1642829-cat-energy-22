@@ -7,9 +7,7 @@
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo">
-        <img class="page-header__logo-mobile page-header__logo--active" src="../source/img/logo_mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи">
-        <img class="page-header__logo-tablet" src="../source/img/logo_tablet.svg" width="174" height="52" alt="Логотип Кэт энерджи">
-        <img class="page-header__logo-desktop" src="../source/img/logo_desktop.svg" width="202" height="59" alt="Логотип Кэт энерджи">
+        <img class=" page-header__logo page-header__logo--mobile" src="img/logo_mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -30,9 +28,9 @@
     </header>
     <main class="page-main">
 
-      <div class="top">
-        <h1 class="top__name">Функциональное питание для котов</h1>
-        <p class="top__slogan">Занялся собой? Займись котом!</p>
+      <div class="intro">
+        <h1 class="main-title intro__title">Функциональное питание для котов</h1>
+        <p class="subtitle intro__slogan">Занялся собой? Займись котом!</p>
         <a class="button" href="form.html">Подобрать программу</a>
       </div>
 
@@ -86,25 +84,23 @@
           </dl>
           <p class="example__price">Затраты на питание: 15 000 руб.</p>
           <div class="example__before-after">
-            <img class="example__img example__img--before" src="../source/img/Index/cat_fat.jpg" width="311" height="232" alt="Толстый кот">
-            <img class="example__img example__img--after" src="../source/img/Index/cat_skinny.jpg" width="245" height="232" alt="Худой кот">
-            <p>
-              <label>Было<input type="range" id="weight" name="weight" min="0" max="2" value="1" step="1">Стало</label>
-            </p>
+            <img class="example__img example__img--before" src="img/Index/cat_fat.jpg" width="311" height="232" alt="Толстый кот">
+            <img class="example__img example__img--after" src="img/Index/cat_skinny.jpg" width="245" height="232" alt="Худой кот">
+            <div class="example__legend">Было<div class="example__toggle">Кнопка</div>Стало</div>
           </div>
         </div>
       </section>
 
       <footer class="page-footer">
         <div class="page-footer__wrapper">
-          <div class="page-footer__contacts contacts"></div>
+          <div class="page-footer__contacts contacts">
             <h2 class="visually-hidden">Контакты</h2>
             <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
             <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002876!2d30.320858715800814!3d59.93871916905456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1615120484034!5m2!1sen!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
           <div class="page-footer__social social">
-            <img class="page-footer__logo" src="../source/img/footer_logo.svg" width="128" height="24" alt="Название Кэт энерджи">
+            <img class="page-footer__logo" src="img/footer_logo.svg" width="128" height="24" alt="Название Кэт энерджи">
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
@@ -140,6 +136,7 @@
               </a>
             </div>
           </div>
+        </div>
       </footer>
 
     </main>
