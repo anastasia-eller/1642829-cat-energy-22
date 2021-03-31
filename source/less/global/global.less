@@ -1,0 +1,57 @@
+
+/* Global */
+
+.page__body {
+  min-width: 320px;
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  background-color: var(--basic-white);
+
+  min-height: 100%;
+  padding: 11px 22px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hidden elements */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Button */
+
+.button {
+  font: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  padding: 8px 66px;
+  background-color: var(--basic-green);
+}
+
+.button:hover {
+  background-color: var(--special-green);
+}
+
+.button:active span {
+  opacity: 0.3;
+}
