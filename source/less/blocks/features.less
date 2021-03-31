@@ -1,0 +1,70 @@
+.features__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: var(--black);
+}
+
+.features__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features__item {
+  position: relative;
+}
+
+.features__description {
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--grey);
+  margin-left: 90px;
+  margin-bottom: 24px;
+}
+
+.features__item::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: var(--basic-green);
+}
+
+.features__item--one::before {
+  content: '';
+  position: absolute;
+  display: block;
+  background-image: url("../img/Index/icon_leaf.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.features__item--two::before {
+  content: '';
+  position: absolute;
+  display: block;
+  background-image: url("../img/Index/icon_tub.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.features__item--three::before {
+  content: '';
+  position: absolute;
+  display: block;
+  background-image: url("../img/Index/icon_eat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.features__item--four::before {
+  content: '';
+  position: absolute;
+  display: block;
+  background-image: url("../img/Index/icon_alarm.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}

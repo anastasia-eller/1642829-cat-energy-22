@@ -1,0 +1,66 @@
+
+.programs__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.programs__item {
+  background-color: var(--footer-grey);
+  width: 266px;
+  height: 280px;
+}
+
+.programs__name {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  position: relative;
+  margin-left: 91px;
+  padding-top: 30px;
+}
+
+.programs__name--weightloss::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 53px;
+  background-image: url("../img/Index/cat_weightloss.svg");
+  background-repeat: no-repeat;
+  margin-left: -68px;
+}
+
+.programs__name--weightgain::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 67px;
+  height: 50px;
+  background-image: url("../img/Index/cat_weight_gain.svg");
+  background-repeat: no-repeat;
+  margin-left: -72px;
+}
+
+.programs__description {
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--grey);
+  margin-left: 20px;
+}
+
+.programs__link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--black);
+  width: 227px;
+  height: 90px;
+}
+
+.programs__link:active {
+  opacity: 0.3;
+}
