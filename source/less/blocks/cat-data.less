@@ -1,0 +1,66 @@
+.cat-data {
+  .fieldset-basics;
+  width: 320px;
+  position: relative;
+  margin-bottom: 37px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    border-bottom: 1px solid var(--blocks-grey);
+    left: 0;
+    top: 188px;
+  }
+}
+
+.cat-data__item {
+  margin: 0 0 12px 20px;
+}
+
+.cat-data__label,
+.cat-data__input {
+  .form-text;
+  color: var(--grey);
+}
+
+.cat-data__label {
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.cat-data__input {
+  border: 1px solid var(--border);
+  padding-left: 15px;
+
+  &:hover {
+    border-color: var(--options-grey);
+  }
+
+  &:active {
+    border: 2px solid var(--grey);
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border: 2px solid var(--error);
+  }
+}
+
+.cat-data__input::placeholder {
+  text-transform: uppercase;
+}
+
+.input-name {
+  width: 208px;
+  height: 43px;
+}
+
+.input-weight {
+  width: 185px;
+  height: 43px;
+}
+
+.input-age {
+  width: 153px;
+  height: 43px;
+}

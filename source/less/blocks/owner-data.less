@@ -1,0 +1,66 @@
+.owner-data {
+  .fieldset-basics;
+  margin-left: 20px;
+  margin-bottom: 9px;
+}
+
+.owner-data__label,
+.owner-data__input {
+  .form-text;
+  color: var(--grey);
+}
+
+.owner-data__label {
+  text-transform: uppercase;
+  margin-right: 8px;
+}
+
+.owner-data__legend {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: var(--black);
+  width: 187px;
+  position: relative;
+  margin-bottom: 13px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 99px;
+    border-bottom: 2px solid var(--basic-green);
+    top: 16px;
+    left: 201px;
+  }
+}
+
+.owner-data__input {
+  border: 1px solid var(--border);
+  padding-left: 15px;
+
+  &:hover {
+    border-color: var(--options-grey);
+  }
+
+  &:active {
+    border: 2px solid var(--grey);
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border: 2px solid var(--error);
+  }
+}
+
+.owner-data__input::placeholder {
+  text-transform: uppercase;
+}
+
+.input-email {
+  width: 204px;
+  height: 43px;
+}
+
+.input-phone {
+  width: 189px;
+  height: 43px;
+}

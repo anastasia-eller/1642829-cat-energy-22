@@ -1,7 +1,21 @@
-.page-header__logo:hover {
-  opacity: 0.8;
-}
+.page-header__logo {
+  position: relative;
+  padding: 12px 23px 16px 10px;
 
-.page-header__logo:active {
-  opacity: 0.6;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    border-bottom: 1px solid var(--menu-lines);
+    top: 30px;
+    left: 0;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

@@ -1,7 +1,14 @@
 .example {
   background-color: var(--example-grey);
-  width: 320px;
-  height: 705px;
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.example__list dl {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .example__title {
@@ -9,21 +16,17 @@
   font-size: 36px;
   line-height: 40px;
   color: var(--black);
-
-  margin-left: 20px;
   padding-top: 27px;
 }
 
 .example__intro {
-  font-family: Arial;
+  font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: var(--grey);
-
   width: 280px;
   height: 108px;
-  margin-left: 20px;
 }
 
 .example__number {
@@ -34,7 +37,7 @@
 }
 
 .example__legend {
-  font-family: Arial;
+  font-family: "Arial", sans-serif;
   font-weight: normal;
   font-size: 12px;
   line-height: 12px;
@@ -47,12 +50,47 @@
   line-height: 20px;
   color: var(--black);
   text-transform: uppercase;
+  text-align: center;
+}
+
+.example__before-after img {
+  margin-bottom: 27px;
 }
 
 .example__text {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: var(--black);
+  padding-bottom: 31px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.example__toggle::before {
+  content: "";
+  position: absolute;
+  width: 84px;
+  height: 14px;
+  border: 1px solid var(--options-grey);
+  border-radius: 6px;
+  background-color: var(--basic-white);
+  cursor: pointer;
+  left: 115px;
+  margin-top: 2px;
+}
+
+.example__toggle::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: var(--basic-green);
+  cursor: pointer;
+  left: 122px;
+  margin-top: 7px;
 }
