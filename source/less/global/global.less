@@ -2,13 +2,16 @@
 /* Global */
 
 .page__body {
-  min-width: 320px;
-  margin: 0;
+  width: 320px;
   font-family: "Oswald", "Arial", sans-serif;
   background-color: var(--basic-white);
 
   min-height: 100%;
-  padding: 11px 22px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -44,12 +47,12 @@ img {
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basic-white);
-  padding: 8px 66px;
+  padding: 9px 73px;
   background-color: var(--basic-green);
-}
 
-.button:hover {
-  background-color: var(--special-green);
+  &:hover {
+    background-color: var(--special-green);
+  }
 }
 
 .button:active span {
