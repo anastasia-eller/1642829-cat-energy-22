@@ -13,23 +13,24 @@
 .catalog__item {
   display: grid;
   grid-template-areas:
-    "product title title"
-    "product info info"
-    "button button button";
-  grid-template-columns: repeat(3, 1fr);
+    "product title"
+    "product info"
+    "button button";
+  grid-template-columns: auto 1fr;
   grid-template-rows: 1fr 1fr 43px;
 }
 
 .catalog__title {
   grid-area: title;
   display: block;
+}
+
+.catalog__heading {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: var(--dark-grey);
-  width: 76px;
-  height: 41px;
 }
 
 .catalog__info {
@@ -52,4 +53,14 @@
 .catalog__picture {
   grid-area: product;
   display: block;
+  width: 100%;
+  height: auto;
+}
+
+.catalog__cell-title {
+  text-align: left;
+}
+
+.catalog__cell-content {
+  text-align: right;
 }

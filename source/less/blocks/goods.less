@@ -3,13 +3,16 @@
   margin-bottom: 57px;
 }
 
+.goods__item {
+  flex-basis: 100%;
+}
+
 .goods__info {
   display: flex;
   flex-wrap: wrap;
 }
 
 .goods__name {
-  flex-basis: 100%;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
@@ -25,8 +28,14 @@
   line-height: 14px;
   color: var(--grey);
   flex-basis: 50%;
+  box-sizing: border-box;
 }
 
 .goods__button {
+  flex-basis: 100%;
+  display: block;
+}
+
+.goods__buy {
   flex-basis: 100%;
 }
