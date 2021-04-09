@@ -1,0 +1,54 @@
+.more {
+  margin-top: 89px;
+}
+
+.more__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--dark);
+  position: relative;
+  text-align: center;
+
+  &::before {
+    content: "";
+    height: 30px;
+    width: 2px;
+    background: var(--decor-grey);
+    position: absolute;
+    left: 50%;
+    top: -50px;
+  }
+
+  &::after {
+    content: "";
+    height: 2px;
+    width: 30px;
+    background: var(--decor-grey);
+    position: absolute;
+    left: 136px;
+    top: -35px;
+  }
+}
+
+.more__text {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--grey);
+  text-align: center;
+}
+
+.more__button {
+  font: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--grey);
+  padding: 10px 100px;
+  background-color: var(--footer-grey);
+  border: none;
+}

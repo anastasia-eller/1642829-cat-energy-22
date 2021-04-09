@@ -4,7 +4,7 @@
 }
 
 .social__list {
-  .list-basics;
+  .list-basics();
   position: relative;
   margin-top: 56px;
   margin-bottom: 45px;
@@ -39,4 +39,9 @@
   &:active path {
     opacity: 0.3;
   }
+}
+
+.social__link--facebook:hover path {
+  fill: var(--basic-white);
+  stroke: var(--basic-green);
 }
