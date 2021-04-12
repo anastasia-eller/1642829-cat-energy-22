@@ -1,6 +1,14 @@
 .features {
   width: 320px;
-  margin: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
 }
 
 .features__title {
@@ -12,6 +20,19 @@
 
 .features__list {
   .list-basics();
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 630px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1225px;
+  }
 }
 
 .features__item {

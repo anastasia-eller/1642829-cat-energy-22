@@ -1,9 +1,27 @@
 .programs {
-  padding-left: 20px;
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
 }
 
 .programs__list {
   .list-basics();
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1220px;
+  }
 }
 
 .programs__item {
@@ -11,6 +29,17 @@
   width: 280px;
   height: 266px;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    height: 372px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    height: 374px;
+  }
 }
 
 .programs__name {
