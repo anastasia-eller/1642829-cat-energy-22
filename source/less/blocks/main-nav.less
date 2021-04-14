@@ -4,16 +4,15 @@
   flex-direction: column;
   flex-wrap: wrap;
   min-width: 320px;
-  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    min-width: 440px;
+    width: 440px;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 478px;
+    width: 478px;
   }
 }
 
@@ -30,7 +29,6 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    text-align: justify;
   }
 
   @media (min-width: @desktop-width) {

@@ -1,7 +1,23 @@
 .owner-data {
   .fieldset-basics();
-  margin-left: 20px;
   margin-bottom: 9px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 320px;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding-left: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 0 110px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .owner-data__label,
@@ -24,14 +40,14 @@
   position: relative;
   margin-bottom: 13px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 99px;
-    border-bottom: 2px solid var(--basic-green);
-    top: 16px;
-    left: 201px;
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 99px;
+  //   border-bottom: 2px solid var(--basic-green);
+  //   top: 16px;
+  //   left: 201px;
+  // }
 }
 
 .owner-data__input {
@@ -58,9 +74,27 @@
 .input-email {
   width: 204px;
   height: 43px;
+
+  @media (min-width: @tablet-width) {
+    width: 551px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 486px;
+  }
 }
 
 .input-phone {
   width: 189px;
   height: 43px;
+
+  @media (min-width: @tablet-width) {
+    width: 535px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 472px;
+  }
 }

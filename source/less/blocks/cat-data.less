@@ -1,21 +1,28 @@
 .cat-data {
   .fieldset-basics();
-  width: 320px;
+  width: 280px;
   position: relative;
-  margin-bottom: 37px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 320px;
-    border-bottom: 1px solid var(--blocks-grey);
-    left: 0;
-    top: 188px;
+  @media (min-width: @tablet-width) {
+    width: 630px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+  }
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 320px;
+  //   border-bottom: 1px solid var(--blocks-grey);
+  //   left: 0;
+  //   top: 188px;
+  // }
 }
 
 .cat-data__item {
-  margin: 0 0 12px 20px;
+  margin: 0 0 12px 0;
 }
 
 .cat-data__label,
@@ -53,14 +60,41 @@
 .input-name {
   width: 208px;
   height: 43px;
+
+  @media (min-width: @tablet-width) {
+    width: 567px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 506px;
+  }
 }
 
 .input-weight {
   width: 185px;
   height: 43px;
+
+  @media (min-width: @tablet-width) {
+    width: 536px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 475px;
+  }
 }
 
 .input-age {
   width: 153px;
   height: 43px;
+
+  @media (min-width: @tablet-width) {
+    width: 497px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
+  }
 }

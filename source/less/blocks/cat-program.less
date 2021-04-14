@@ -1,20 +1,24 @@
 .cat-program {
   .fieldset-basics();
-  margin-bottom: 29px;
+  width: 320px;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 630px;
+  }
 }
 
-.cat-program::after {
-  content: "";
-  position: absolute;
-  width: 320px;
-  border-bottom: 1px solid var(--blocks-grey);
-  left: 0;
-  bottom: -75px;
-}
+// .cat-program::after {
+//   content: "";
+//   position: absolute;
+//   width: 320px;
+//   border-bottom: 1px solid var(--blocks-grey);
+//   left: 0;
+//   bottom: -75px;
+// }
 
 .cat-program__list {
   .list-basics();
-  margin: 0 0 0 20px;
 }
 
 .cat-program__item {

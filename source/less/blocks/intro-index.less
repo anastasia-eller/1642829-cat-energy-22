@@ -1,21 +1,17 @@
 .intro-index {
-  width: 320px;
-  height: 563px;
+  width: 100%;
+  min-height: 563px;
   background-image: url("../img/Index/mobile_background.jpg");
   background-repeat: no-repeat;
-  padding: 0;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    height: 847px;
-    margin: auto;
-    padding: 0 30px;
     background-image: none;
+    min-height: 768px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 847px;
-    margin: auto;
-    padding: 0 110px;
+    min-height: 696px;
   }
 }
 
@@ -67,8 +63,4 @@
     text-align: left;
     margin-bottom: 52px;
   }
-}
-
-.intro__button {
-  margin-left: 20px;
 }
