@@ -8,11 +8,11 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    width: 440px;
+    min-width: 440px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 478px;
+    min-width: 478px;
   }
 }
 
@@ -73,6 +73,12 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.main-nav__link--white {
+  @media (min-width: @desktop-width) {
+    color: var(--basic-white);
   }
 }
 

@@ -3,7 +3,9 @@
   min-height: 563px;
   background-image: url("../img/Index/mobile_background.jpg");
   background-repeat: no-repeat;
+  left: 190px;
   margin: 0 auto;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     background-image: none;
@@ -12,6 +14,17 @@
 
   @media (min-width: @desktop-width) {
     min-height: 696px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: var(--basic-green);
+      width: 45vw;
+      height: 694px;
+      right: 190px;
+      top: -96px;
+      z-index: -1;
+    }
   }
 }
 
