@@ -8,13 +8,11 @@
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
-    padding-left: 70px;
+    .tablet-container();
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
-    padding: 0 110px;
+    .desktop-container();
     flex-direction: row;
     justify-content: space-between;
   }

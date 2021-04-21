@@ -1,15 +1,48 @@
 .goods {
-  padding-left: 20px;
-  margin-bottom: 57px;
+  width: 320px;
+  padding: 0 20px;
+  margin-bottom: 80px;
+
+  @media (min-width: @tablet-width) {
+    .tablet-container();
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-container();
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.goods__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .goods__item {
   flex-basis: 100%;
+
+  @media (min-width: @tablet-width) {
+    flex-basis: 60%;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-basis: 30%;
+  }
 }
 
 .goods__info {
   display: flex;
   flex-wrap: wrap;
+  width: 282px;
+
+  @media (min-width: @tablet-width) {
+    width: 632px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 896px;
+  }
 }
 
 .goods__name {
@@ -31,6 +64,26 @@
   box-sizing: border-box;
 }
 
+.goods__price {
+  @media (min-width: @tablet-width) {
+    flex-basis: 15%;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-basis: 10%;
+  }
+}
+
+.goods__quantity {
+  @media (min-width: @tablet-width) {
+    flex-basis: 25%;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-basis: 30%;
+  }
+}
+
 .goods__button {
   flex-basis: 100%;
   display: block;
@@ -38,4 +91,8 @@
 
 .goods__buy {
   flex-basis: 100%;
+
+  @media (min-width: @desktop-width) {
+    flex-basis: 30%;
+  }
 }

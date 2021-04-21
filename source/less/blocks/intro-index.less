@@ -3,19 +3,36 @@
   min-height: 563px;
   background-image: url("../img/Index/mobile_background.jpg");
   background-repeat: no-repeat;
+  left: 190px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     background-image: none;
     min-height: 768px;
+    padding-left: 117px;
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
     min-height: 696px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: rgba(104, 183, 56, 0.85);
+      width: 45vw;
+      height: 694px;
+      right: 190px;
+      top: -96px;
+      z-index: -2;
+    }
   }
 }
 
 .intro__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
   text-align: center;
   color: var(--basic-white);
   position: relative;
@@ -24,8 +41,11 @@
   margin-top: 0;
 
   @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
     color: var(--black);
     text-align: left;
+    width: 414px;
   }
 
   &::after {
