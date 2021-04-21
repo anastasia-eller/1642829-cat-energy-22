@@ -1,21 +1,22 @@
 .goods {
   width: 320px;
   padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   margin-bottom: 80px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
-    padding: 0 30px;
+    .tablet-container();
   }
 
   @media (min-width: @desktop-width) {
+    .desktop-container();
+    display: flex;
     flex-direction: row;
-    width: 1280px;
-    padding: 0 80px;
   }
+}
+
+.goods__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .goods__item {
