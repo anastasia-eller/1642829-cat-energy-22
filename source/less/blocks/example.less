@@ -18,18 +18,17 @@
   }
 }
 
-// .example__list dl {
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr);
-//   grid-template-rows: repeat(2, 1fr);
-// }
-
 .example__title {
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
   color: var(--black);
   padding-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .example__intro {
@@ -39,7 +38,30 @@
   line-height: 18px;
   color: var(--grey);
   width: 280px;
-  height: 108px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
+  }
+}
+
+.example__container {
+  @media (min-width: @tablet-width) {
+    .tablet-container();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-container();
+    flex-direction: column;
+  }
 }
 
 .example__info {
@@ -61,6 +83,11 @@
   width: 124px;
   height: 56px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    height: 72px;
+  }
 }
 
 .example__number {
@@ -72,6 +99,11 @@
   text-align: center;
   display: block;
   padding: 11px 15px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__legend {
@@ -89,6 +121,9 @@
 
   @media (min-width: @tablet-width) {
     background: var(--basic-white);
+    font-size: 14px;
+    line-height: 14px;
+    width: 140px;
   }
 
   @media (min-width: @desktop-width) {
@@ -103,10 +138,43 @@
   color: var(--black);
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    width: 174px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 337px;
+  }
 }
 
 .example__before-after img {
   margin-bottom: 27px;
+}
+
+.example__scale {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  &--mobile {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    @media (min-width: @mobile-width-only) {
+      display: none;
+    }
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
 }
 
 .example__text {
@@ -115,11 +183,20 @@
   line-height: 20px;
   text-transform: uppercase;
   color: var(--black);
-  padding-bottom: 31px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  border-bottom: 1px dotted grey;
+
+  &:hover {
+    border-bottom: 1px solid grey;
+  }
+
+  &:active {
+    border-bottom: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .example__toggle::before {

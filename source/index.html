@@ -18,11 +18,11 @@
       <a class="page-header__logo">
         <img class=" page-header__logo page-header__logo--mobile" src="img/logo_mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи">
       </a>
-      <nav class="main-nav main-nav--white">
+      <nav class="main-nav main-nav--white main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
+            <li class="main-nav__item main-nav__item--active main-nav__item--white">
               <a class="main-nav__link">Главная</a>
             </li>
             <li class="main-nav__item">
@@ -84,6 +84,7 @@
         <div class="example__wrapper">
           <h2 class="example__title">Живой пример</h2>
           <p class="example__intro">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="example__container">
           <dl class="example__info">
             <div class="example__result">
               <dt class="example__number">5 кг</dt>
@@ -95,10 +96,12 @@
             </div>
           </dl>
           <p class="example__price">Затраты на питание: 15 000 руб.</p>
+          </div>
           <div class="example__before-after">
             <img class="example__img example__img--before" src="img/Index/cat_fat.png" width="311" height="232" alt="Толстый кот">
             <img class="example__img example__img--after visually-hidden" src="img/Index/cat_skinny.png" width="245" height="232" alt="Худой кот">
-            <div class="example__text">Было<div class="example__toggle"></div>Стало</div>
+            <div class="example__scale example__scale--mobile"><span class="example__text">Было</span><div class="example__toggle"></div><span class="example__text">Стало</span></div>
+            <div class="example__scale example__scale--tablet"><span class="example__text">Было</span><input type="range" min="0" max="2" step="1" value="1"><span class="example__text">Стало</span></div>
           </div>
         </div>
       </section>

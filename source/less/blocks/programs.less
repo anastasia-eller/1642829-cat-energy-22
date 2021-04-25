@@ -49,7 +49,12 @@
   text-transform: uppercase;
   position: relative;
   margin-left: 91px;
-  padding-top: 30px;
+  padding-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .programs__name--weightloss::before {
@@ -78,7 +83,6 @@
 
 .programs__description {
   width: 227px;
-  height: 90px;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -95,6 +99,21 @@
     width: 240px;
     top: 112px;
     left: 0;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--black);
+    width: 377px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 467px;
   }
 }
 
@@ -112,6 +131,11 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .programs__link::after {
@@ -123,6 +147,10 @@
   height: 12px;
   top: 6px;
   left: 100px;
+
+  @media (min-width: @tablet-width) {
+    left: 125px;
+  }
 }
 
 .programs__link:hover::after {
