@@ -1,9 +1,11 @@
 .intro-index {
   width: 100%;
   min-height: 563px;
-  background-image: url("../img/Index/mobile_background.jpg");
+  background-image: url("../img/Index/mobile_background.jpg"), linear-gradient(var(--intro-green) 303px, var(--basic-white) 303px);
+  background-position: center top;
   background-repeat: no-repeat;
   padding: 0 20px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     background-image: none;
@@ -19,11 +21,35 @@
       content: "";
       position: absolute;
       background-color: rgba(104, 183, 56, 0.85);
-      width: 45vw;
+      width: 50vw;
       height: 694px;
-      right: 190px;
+      right: 0;
       top: -96px;
       z-index: -2;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../img/Index/main_cat_food.png");
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 270px;
+    background-size: contain;
+    margin-top: 166px;
+    background-position: center;
+
+    @media (min-width: @tablet-width) {
+      width: 709px;
+      height: 609px;
+      z-index: -1;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 552px;
+      height: 499px;
     }
   }
 }
@@ -37,7 +63,7 @@
   position: relative;
   top: 28px;
   padding-bottom: 30px;
-  margin-top: 0;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -45,29 +71,7 @@
     color: var(--black);
     text-align: left;
     width: 414px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    display: block;
-    background-image: url("../img/Index/main_cat_food.png");
-    background-repeat: no-repeat;
-    width: 280px;
-    height: 270px;
-    background-size: contain;
-    margin-top: 65px;
-
-    @media (min-width: @tablet-width) {
-      width: 709px;
-      height: 609px;
-      z-index: -1;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 552px;
-      height: 499px;
-    }
+    margin: 0;
   }
 }
 
@@ -90,11 +94,14 @@
 }
 
 .intro__button {
+  display: block;
   margin: 0 auto;
+  width: 280px;
 
   @media (min-width: @tablet-width) {
     padding: 14px 26px;
     font-size: 20px;
     line-height: 20px;
+    margin: 0;
   }
 }

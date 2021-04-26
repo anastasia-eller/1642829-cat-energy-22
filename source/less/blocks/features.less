@@ -2,6 +2,7 @@
   width: 320px;
   padding: 0 20px;
   counter-reset: description;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     .tablet-container();
@@ -31,14 +32,14 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     column-gap: 153px;
     row-gap: 77px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
     column-gap: 94px;
   }
 }
@@ -103,7 +104,6 @@
   font-size: 14px;
   line-height: 18px;
   color: var(--grey);
-  width: 279px;
   padding-bottom: 24px;
   padding-left: 80px;
   position: relative;
@@ -111,8 +111,7 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    width: 245px;
-    padding: 111px 5px 4px 0;
+    padding: 111px 0 4px 0;
 
     &::after {
       counter-increment: description;
