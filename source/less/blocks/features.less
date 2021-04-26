@@ -1,6 +1,8 @@
 .features {
   width: 320px;
   padding: 0 20px;
+  counter-reset: description;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     .tablet-container();
@@ -16,22 +18,29 @@
   font-size: 36px;
   line-height: 40px;
   color: var(--black);
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 72px;
+  }
 }
 
 .features__list {
   .list-basics();
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 630px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 153px;
+    row-gap: 77px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1225px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    column-gap: 94px;
   }
 }
 
@@ -45,6 +54,11 @@
     width: 60px;
     height: 60px;
     background: var(--basic-green);
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 }
 
@@ -90,8 +104,26 @@
   font-size: 14px;
   line-height: 18px;
   color: var(--grey);
-  width: 199px;
-  height: 54px;
-  margin-bottom: 24px;
-  margin-left: 80px;
+  padding-bottom: 24px;
+  padding-left: 80px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 111px 0 4px 0;
+
+    &::after {
+      counter-increment: description;
+      content: counter(description);
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: var(--footer-grey);
+      position: absolute;
+      z-index: -1;
+      top: -40px;
+      left: 100px;
+    }
+  }
 }
