@@ -1,20 +1,67 @@
 .owner-data {
   .fieldset-basics();
-  margin-bottom: 9px;
+  position: relative;
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 99px;
+    background-color: var(--basic-green);
+    height: 2px;
+    top: -12px;
+    right: 0;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      width: 100%;
+    }
+  }
+}
+
+.owner-data__legend {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: var(--black);
+  background-color: var(--basic-white);
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 40px;
+    margin-left: 30px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 70px;
+  }
+}
+
+.owner-data--gap {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.owner-data__wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 320px;
   padding: 0 20px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    .tablet-container();
+    width: 768px;
+    padding-left: 70px;
   }
 
   @media (min-width: @desktop-width) {
-    .desktop-container();
     flex-direction: row;
     justify-content: space-between;
+    width: 1440px;
+    padding: 0 111px;
   }
 }
 
@@ -25,32 +72,22 @@
 }
 
 .owner-data__label {
-  text-transform: uppercase;
-  margin-right: 8px;
-}
-
-.owner-data__legend {
   font-weight: 400;
-  font-size: 24px;
-  line-height: 26px;
-  color: var(--black);
-  width: 187px;
-  position: relative;
-  margin-bottom: 13px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-right: 5px;
+  color: var(--grey);
 
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   width: 99px;
-  //   border-bottom: 2px solid var(--basic-green);
-  //   top: 16px;
-  //   left: 201px;
-  // }
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .owner-data__input {
   border: 1px solid var(--border);
-  padding-left: 15px;
+  padding: 0 15px;
 
   &:hover {
     border-color: var(--options-grey);
@@ -66,12 +103,24 @@
 }
 
 .owner-data__input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
+  color: var(--grey);
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .input-email {
-  width: 204px;
-  height: 43px;
+  width: 219px;
+  height: 46px;
+  background-image: url("../img/form/icon_email.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
 
   @media (min-width: @tablet-width) {
     width: 551px;
@@ -84,8 +133,11 @@
 }
 
 .input-phone {
-  width: 189px;
-  height: 43px;
+  width: 204px;
+  height: 46px;
+  background-image: url("../img/form/icon_phone.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
 
   @media (min-width: @tablet-width) {
     width: 535px;

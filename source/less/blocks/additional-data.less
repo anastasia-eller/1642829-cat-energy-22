@@ -1,7 +1,22 @@
 .additional-data {
   .fieldset-basics();
-  margin-left: 20px;
-  margin-bottom: 18px;
+  width: 100%;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    min-width: 136px;
+    background-color: var(--basic-green);
+    height: 2px;
+    top: -30px;
+    right: 0;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      width: 100%;
+    }
+  }
 }
 
 .additional-data__legend {
@@ -10,31 +25,65 @@
   line-height: 26px;
   color: var(--black);
   margin-bottom: 19px;
+  background-color: var(--basic-white);
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 136px;
-    border-bottom: 2px solid var(--basic-green);
-    left: 185px;
-    bottom: -570px;
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 40px;
+    margin-left: 30px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 70px;
   }
 }
 
 .additional-data__list {
   .list-basics();
-}
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 20px;
+  width: 320px;
+  padding: 0 20px;
 
-.additional-data__item {
-  margin-bottom: 19px;
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 114px;
+    row-gap: 32px;
+    width: 768px;
+    padding: 0 133px 54px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 94px;
+    padding-left: 111px;
+    width: 1440px;
+    padding-right: 134px;
+  }
 }
 
 .additional-data__label {
   .form-text();
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
   color: var(--black);
   text-transform: uppercase;
   position: relative;
+  padding-left: 16px;
   margin-left: 46px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .additional-data__input + .additional-data__label::before {
@@ -44,6 +93,11 @@
   border: 1px solid var(--details-grey);
   position: absolute;
   left: -46px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .additional-data__input + .additional-data__label:hover::before {
@@ -56,8 +110,13 @@
   width: 18px;
   height: 14px;
   position: absolute;
-  left: -38px;
-  top: 9px;
+  left: -39px;
+  top: 8px;
+
+  @media (min-width: @tablet-width) {
+    left: -35px;
+    top: 12px;
+  }
 }
 
 .additional-data__input + .additional-data__label:active::before,

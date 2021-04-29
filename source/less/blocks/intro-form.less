@@ -1,11 +1,13 @@
 .intro-form {
   width: 320px;
   padding: 0 20px;
+  margin: 0 auto;
   position: relative;
 
-
   @media (min-width: @tablet-width) {
-    .tablet-container();
+    width: 768px;
+    padding: 0 70px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -14,16 +16,28 @@
 }
 
 .intro-form__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
   color: var(--black);
   text-align: left;
   margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .intro-form__slogan {
+  font-size: 14px;
   line-height: 18px;
+  text-transform: uppercase;
   color: var(--black);
   text-align: left;
-  width: 230px;
-  height: 36px;
-  margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
