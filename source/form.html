@@ -19,7 +19,7 @@
       <a class="page-header__logo" href="index.html">
         <img class=" page-header__logo page-header__logo--mobile" src="img/logo_mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--white main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
@@ -41,7 +41,7 @@
 
       <div class="intro intro-form">
         <h1 class="main-title intro-form__title">Подбор программы</h1>
-        <p class="subtitle intro-form__slogan">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <p class="subtitle intro-form__slogan">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
       </div>
 
       <section class="form">
@@ -52,6 +52,7 @@
             <fieldset class="cat-data">
 
               <legend class="visually-hidden">Данные кота</legend>
+              <div class="cat-data__wrapper">
               <p class="cat-data__item">
                 <label class="cat-data__label" for="cat_name">Имя:*</label>
                 <input class="cat-data__input input-name" id="cat_name" type="text" placeholder="Барсик" name="cat name" required>
@@ -64,13 +65,13 @@
                 <label class="cat-data__label" for="cat_age">Возраст (лет):</label>
                 <input class="cat-data__input input-age" id="cat_age" type="number" placeholder="7" name="cat age">
               </p>
-
+            </div>
             </fieldset>
 
             <fieldset class="cat-program">
 
               <legend class="visually-hidden">Выбор программы</legend>
-
+              <div class="cat-program__wrapper">
               <ul class="cat-program__list">
                 <li class="cat-program__item">
                   <input class="cat-program__input visually-hidden" type="radio" name="program" value="weightloss" id="option-weightloss" checked>
@@ -85,12 +86,13 @@
                   <label class="cat-program__label" for="option-advice_request">Не знаю (нужен ваш совет)</label>
                 </li>
               </ul>
+            </div>
             </fieldset>
             </div>
 
             <fieldset class="owner-data">
-
-              <legend class="owner-data__legend">Контактные данные (владельца кота)</legend>
+              <legend class="owner-data__legend">Контактные данные <br class="owner-data--gap">(владельца кота)</legend>
+              <div class="owner-data__wrapper">
               <p class="owner-data__item">
                 <label class="owner-data__label" for="owner_email">E-mail:*</label>
                 <input class="owner-data__input input-email" id="owner_email" type="email" placeholder="kuklachev@gmail.com" name="owner email" required>
@@ -99,7 +101,7 @@
                 <label class="owner-data__label" for="owner_phone">Телефон:*</label>
                 <input class="owner-data__input input-phone" id="owner_phone" type="tel" placeholder="8 (960) 900-60-90" name="owner phone" required>
               </p>
-
+              </div>
             </fieldset>
 
             <div class="comment-data">
