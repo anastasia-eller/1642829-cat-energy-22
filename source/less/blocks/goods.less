@@ -1,6 +1,46 @@
 .goods {
+  width: 100%;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: var(--basic-green);
+    height: 2px;
+    top: 15px;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+.goods__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--black);
+  background-color: var(--basic-white);
+  padding: 0 20px;
+  margin-left: calc((100vw - 320px) / 2);
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 36px;
+    margin-left: calc((100vw - 768px) / 2);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: calc((100vw - 1280px) / 2);
+  }
+}
+
+.goods__wrapper {
+  display: flex;
+  flex-direction: column;
   width: 320px;
   padding: 0 20px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     .tablet-container();
@@ -13,9 +53,10 @@
   }
 }
 
-.goods__wrapper {
-  display: flex;
-  flex-direction: column;
+.goods__all {
+  @media (min-width: @desktop-width) {
+    margin-right: 79px;
+  }
 }
 
 .goods__item {
@@ -34,13 +75,32 @@
   display: flex;
   flex-wrap: wrap;
   width: 282px;
+  border-top: 1px solid var(--options-grey);
+  padding-top: 13px;
+  padding-bottom: 19px;
+
+  &:last-child {
+    border-bottom: 1px solid var(--options-grey);
+  }
 
   @media (min-width: @tablet-width) {
-    width: 632px;
+    width: 708px;
+    border-left: 1px solid var(--options-grey);
+    border-right: 1px solid var(--options-grey);
+    padding: 26px 38px 28px 38px;
   }
 
   @media (min-width: @desktop-width) {
     width: 896px;
+    border-top: 1px solid var(--options-grey);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 24px 0 24px 0;
+
+    &:last-child {
+      border-bottom: 1px solid var(--options-grey);
+    }
   }
 }
 
@@ -50,6 +110,11 @@
   line-height: 16px;
   text-transform: uppercase;
   color: var(--dark-grey);
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .goods__price,
@@ -61,19 +126,29 @@
   color: var(--grey);
   flex-basis: 50%;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .goods__price {
+  text-align: right;
+
   @media (min-width: @tablet-width) {
     flex-basis: 15%;
   }
 
   @media (min-width: @desktop-width) {
     flex-basis: 10%;
+    text-align: left;
   }
 }
 
 .goods__quantity {
+  text-align: left;
+
   @media (min-width: @tablet-width) {
     flex-basis: 25%;
   }

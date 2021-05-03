@@ -6,16 +6,12 @@
   &::after {
     content: "";
     position: absolute;
-    width: 99px;
+    width: 100%;
     background-color: var(--basic-green);
     height: 2px;
     top: -12px;
     right: 0;
     z-index: -1;
-
-    @media (min-width: @tablet-width) {
-      width: 100%;
-    }
   }
 }
 
@@ -25,16 +21,18 @@
   line-height: 26px;
   color: var(--black);
   background-color: var(--basic-white);
+  padding: 0 20px;
+  margin-left: calc((100vw - 320px) / 2);
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
     padding: 0 40px;
-    margin-left: 30px;
+    margin-left: calc((100vw - 768px) / 2);
   }
 
-  @media (min-width: @tablet-width) {
-    margin-left: 70px;
+  @media (min-width: @desktop-width) {
+    margin-left: calc((100vw - 1280px) / 2);
   }
 }
 

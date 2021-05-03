@@ -1,9 +1,26 @@
 .intro-catalog {
+  width: 100%;
+  border-bottom: 1px solid var(--line-grey);
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
+}
+
+.intro-catalog__heading {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--black);
+  text-align: left;
   width: 320px;
   padding: 0 20px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     .tablet-container();
+    font-size: 60px;
+    line-height: 60px;
   }
 
   @media (min-width: @desktop-width) {
