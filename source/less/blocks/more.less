@@ -1,18 +1,73 @@
 .more {
-  width: 279px;
+  width: 100%;
+  border-bottom: 1px solid var(--line-grey);
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid var(--footer-grey);
+    margin-top: 81px;
+  }
+}
+
+.more__container {
   background-image: none;
+  width: 320px;
   min-height: 158px;
+  padding: 0 20px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 2px;
+    background: var(--decor-grey);
+    left: 50%;
+    top: 25px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    background: var(--decor-grey);
+    left: 46%;
+    top: 39px;
+  }
 
   @media (min-width: @tablet-width) {
     width: 324px;
-    min-height: 429px;
+    height: 429px;
+
+    &::before {
+      height: 60px;
+      left: 50%;
+      top: 52px;
+    }
+
+    &::after {
+      width: 60px;
+      left: 130px;
+      top: 82px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
-    min-height: 430px;
+    height: 430px;
+
+    &::before {
+      left: 50%;
+      top: 51px;
+    }
+
+    &::after {
+      left: 92px;
+      top: 81px;
+    }
   }
 }
 
@@ -24,26 +79,21 @@
   color: var(--dark);
   position: relative;
   text-align: center;
+  margin-top: 78px;
 
-  // &::before {
-  //   content: "";
-  //   height: 30px;
-  //   width: 2px;
-  //   background: var(--decor-grey);
-  //   position: absolute;
-  //   left: 50%;
-  //   top: -50px;
-  // }
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 160px;
+  }
+}
 
-  // &::after {
-  //   content: "";
-  //   height: 2px;
-  //   width: 30px;
-  //   background: var(--decor-grey);
-  //   position: absolute;
-  //   left: 136px;
-  //   top: -35px;
-  // }
+.more__gap {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
 }
 
 .more__text {
@@ -53,6 +103,11 @@
   line-height: 16px;
   color: var(--grey);
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .more__button {
@@ -62,7 +117,16 @@
   line-height: 20px;
   text-transform: uppercase;
   color: var(--grey);
-  padding: 10px 100px;
+  padding: 10px 94px;
   background-color: var(--footer-grey);
   border: none;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 39px;
+  }
 }

@@ -1,7 +1,5 @@
 .catalog {
-  width: 300px;
-  padding: 0 20px;
-  margin: 0 auto;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     .tablet-container();
@@ -29,6 +27,14 @@
 }
 
 .catalog__item {
+  border-bottom: 1px solid var(--line-grey);
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
+}
+
+.catalog__container {
   display: grid;
   grid-template-areas:
     "product title"
@@ -37,15 +43,17 @@
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr 1fr 43px;
   align-items: center;
-  width: 280px;
-  height: 190px;
+  min-height: 190px;
+  width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 324px;
-    height: 512px;
+    height: 511px;
     margin-right: 60px;
     background-image: linear-gradient(to bottom, var(--basic-white) 81px, var(--footer-grey) 81px);
   }
@@ -67,6 +75,31 @@
   line-height: 20px;
   text-transform: uppercase;
   color: var(--dark-grey);
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 21px;
+  }
+}
+
+.catalog__gap--mob {
+  @media (min-width: @mobile-width-only) {
+    display: inline;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.catalog__gap--tab {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
 }
 
 .catalog__info {
@@ -77,6 +110,22 @@
   font-size: 12px;
   line-height: 16px;
   color: var(--grey);
+  margin-bottom: 22px;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    margin-bottom: 33px;
+  }
+}
+
+.catalog__weight,
+.catalog__taste,
+.catalog__price {
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid var(--details-grey);
+  }
 }
 
 .catalog__button {
@@ -84,6 +133,7 @@
   font-size: 16px;
   line-height: 20px;
   padding: 10px 113px;
+  margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
     padding: 10px 93px;
@@ -105,8 +155,32 @@
 
 .catalog__cell-title {
   text-align: left;
+  width: 71px;
+  padding-bottom: 3px;
+
+  @media (min-width: @tablet-width) {
+    width: 125px;
+    padding-top: 7px;
+    padding-bottom: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 84px;
+  }
 }
 
 .catalog__cell-content {
   text-align: right;
+  width: 71px;
+  padding-bottom: 3px;
+
+  @media (min-width: @tablet-width) {
+    width: 125px;
+    padding-top: 7px;
+    padding-bottom: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 84px;
+  }
 }
