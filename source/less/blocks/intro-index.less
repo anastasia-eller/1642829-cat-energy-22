@@ -28,32 +28,6 @@
       z-index: -2;
     }
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    background-image: url("../img/Index/main_cat_food.png");
-    background-repeat: no-repeat;
-    width: 280px;
-    height: 270px;
-    background-size: contain;
-    margin-top: 166px;
-    left: 50%;
-    transform: translateX(-50%);
-
-
-    @media (min-width: @tablet-width) {
-      width: 709px;
-      height: 609px;
-      z-index: -1;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 552px;
-      height: 499px;
-    }
-  }
 }
 
 .intro__title {
@@ -83,7 +57,7 @@
   line-height: 14px;
   color: var(--basic-white);
   text-align: center;
-  margin-bottom: 310px;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     font-weight: 400;
@@ -91,7 +65,26 @@
     line-height: 20px;
     color: var(--black);
     text-align: left;
-    margin-bottom: 52px;
+  }
+}
+
+.intro-index__img {
+  position: absolute;
+  display: block;
+  width: 280px;
+  height: 270px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    height: 609px;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
   }
 }
 
