@@ -16,7 +16,11 @@
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo">
-        <img class=" page-header__logo page-header__logo--mobile" src="img/logo_mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи">
+        <picture>
+          <source media="(min-width: 1280px)" srcset="img/logo_desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo_tablet.svg">
+          <img class=" page-header__logo" src="img/logo_mobile.svg" alt="Логотип Кэт энерджи">
+        </picture>
       </a>
       <nav class="main-nav main-nav--white main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -39,6 +43,11 @@
       <div class="intro intro-index">
         <h1 class="main-title intro__title">Функциональное питание для котов</h1>
         <p class="subtitle intro__slogan">Занялся собой? Займись котом!</p>
+        <picture>
+          <source media="(min-width: 1280px)" srcset="img/Index/index-food-desktop.png 1x, img/Index/index-food-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/Index/index-food-tablet.png 1x, img/Index/index-food-tablet@2x.png 2x">
+          <img class="intro-index__img" src="../img/Index/index-food-mobile.png" srcset="../img/Index/index-food-mobile@2x.png 2x" alt="Пример упаковки">
+        </picture>
         <a class="button intro__button" href="form.html"><span>Подобрать программу</span></a>
       </div>
 
@@ -98,8 +107,14 @@
           <p class="example__price">Затраты на питание: 15 000 руб.</p>
           </div>
           <div class="example__before-after">
-            <img class="example__img example__img--before" src="img/Index/cat_fat.png" width="311" height="232" alt="Толстый кот">
-            <img class="example__img example__img--after visually-hidden" src="img/Index/cat_skinny.png" width="245" height="232" alt="Худой кот">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/Index/cat-fat-tablet.png 1x, img/Index/cat-fat-tablet@2x.png 2x">
+              <img class="example__img example__img--before" src="img/Index/cat-fat-mobile.png" srcset="img/Index/cat-fat-mobile@2x.png 2x" alt="Толстый кот">
+            </picture>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/Index/cat-skinny-tablet.png 1x, img/Index/cat-skinny-tablet@2x.png 2x">
+              <img class="example__img example__img--after" src="img/Index/cat-skinny-mobile.png" srcset="img/Index/cat-skinny-mobile@2x.png" alt="Худой кот">
+            </picture>
           </div>
           <div class="example__controls example__controls--tablet">
             <button class="example__button example__button--before" type="button" data-value="100"><span>Было</span></button>

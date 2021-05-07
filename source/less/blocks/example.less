@@ -191,6 +191,28 @@
 //   }
 // }
 
+.example__img {
+  &--before {
+    width: 311px;
+    height: 232px;
+
+    @media (min-width: @tablet-width) {
+      width: 677px;
+      height: 520px;
+    }
+  }
+
+  &--after {
+    width: 245px;
+    height: 232px;
+
+    @media (min-width: @tablet-width) {
+      width: 545px;
+      height: 520px;
+    }
+  }
+}
+
 .example__button {
   border: 0;
 }
