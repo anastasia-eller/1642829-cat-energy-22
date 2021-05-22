@@ -13,7 +13,7 @@
 
   @media (min-width: @desktop-width) {
     min-height: 656px;
-    background-image: linear-gradient(to bottom, var(--basic-white) 194px, var(--example-grey) 194px);
+    background-image: linear-gradient(to bottom, var(--basic-white) 164px, var(--example-grey) 164px);
     padding: 0 110px;
   }
 }
@@ -29,6 +29,16 @@
 
   @media (min-width: @desktop-width) {
     .desktop-container();
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.example__text {
+  margin-bottom: 43px;
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
   }
 }
 
@@ -38,10 +48,17 @@
   line-height: 40px;
   color: var(--black);
   padding-top: 27px;
+  margin-top: 0;
+  margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 149px;
   }
 }
 
@@ -52,15 +69,18 @@
   line-height: 18px;
   color: var(--grey);
   width: 280px;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
     width: 708px;
+    margin-bottom: 37px;
   }
 
   @media (min-width: @desktop-width) {
     width: 436px;
+    margin-bottom: 54px;
   }
 }
 
@@ -73,8 +93,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    .desktop-container();
     flex-direction: column;
+    padding: 0;
+    margin-top: 10px;
   }
 }
 
@@ -82,6 +103,7 @@
   display: grid;
   grid-template-columns: 124px 124px;
   column-gap: 31px;
+  margin-bottom: 34px;
 
   @media (min-width: @tablet-width) {
     column-gap: 42px;
@@ -108,6 +130,7 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+  text-transform: uppercase;
   color: var(--black);
   margin: 0;
   text-align: center;
@@ -164,48 +187,47 @@
   }
 }
 
-.example__before-after img {
-  margin-bottom: 27px;
+.example__before-after {
+  --example__before-after: 50%;
+  --psevdo-left: 0;
+  max-width: 310px;
+  width: 310px;
+  position: relative;
 }
 
-// .example__scale {
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-//   justify-content: space-around;
+.example__top {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: var(--example__before-after, 50%);
+  overflow-x: hidden;
+  background-color: var(--example-grey);
+  transition: all 0.3s ease-in-out;
 
-//   &--mobile {
-//     @media (min-width: @tablet-width) {
-//       display: none;
-//     }
-//   }
-
-//   &--tablet {
-//     @media (min-width: @mobile-width-only) {
-//       display: none;
-//     }
-
-//     @media (min-width: @tablet-width) {
-//       display: block;
-//     }
-//   }
-// }
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+  }
+}
 
 .example__img {
-  &--before {
-    width: 311px;
-    height: 232px;
+  width: 311px;
+  min-width: 311px;
+  max-width: 311px;
+  height: auto;
 
+  &--before {
     @media (min-width: @tablet-width) {
       width: 677px;
       height: 520px;
     }
+
+    @media (min-width: @tablet-width) {
+      background-image: linear-gradient(to bottom, var(--basic-white) 164px, var(--example-grey) 164px);
+    }
   }
 
   &--after {
-    width: 245px;
-    height: 232px;
-
     @media (min-width: @tablet-width) {
       width: 545px;
       height: 520px;
@@ -215,6 +237,7 @@
 
 .example__button {
   border: 0;
+  background-color: var(--example-grey);
 }
 
 .example__button span {
@@ -241,27 +264,124 @@
   }
 }
 
-// .example__toggle::before {
-//   content: "";
-//   position: absolute;
-//   width: 84px;
-//   height: 14px;
-//   border: 1px solid var(--options-grey);
-//   border-radius: 6px;
-//   background-color: var(--basic-white);
-//   cursor: pointer;
-//   left: 115px;
-//   margin-top: 2px;
-// }
+.example__controls {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 45px 25px 35px;
+}
 
-// .example__toggle::after {
-//   content: "";
-//   position: absolute;
-//   width: 35px;
-//   height: 6px;
-//   border-radius: 6px;
-//   background-color: var(--basic-green);
-//   cursor: pointer;
-//   left: 122px;
-//   margin-top: 7px;
-// }
+.example__controls::before,
+.example__controls::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.example__controls::before {
+  width: 84px;
+  height: 14px;
+  border: 1px solid var(--options-grey);
+  border-radius: 6px;
+  background-color: var(--basic-white);
+  cursor: pointer;
+  left: 98px;
+  top: 20px;
+}
+
+.example__controls::after {
+  width: 35px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: var(--basic-green);
+  cursor: pointer;
+  left: 104px;
+  top: 24px;
+}
+
+.example__button::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  top: calc(50% - 10px);
+  z-index: 1;
+}
+
+.example__button--before::before {
+  left: 105px;
+}
+
+.example__button--after::before {
+  left: 155px;
+}
+
+.example__input {
+  flex: 1 1 auto;
+  margin: 0 1em;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .example__before-after,
+  .example__img,
+  .example__controls {
+    width: 690px;
+    max-width: 690px;
+    min-width: 690px;
+  }
+
+  .example__input {
+    display: block;
+  }
+
+  .example__controls::before,
+  .example__controls::after {
+    display: none;
+  }
+
+  .example__button::before {
+    content: none;
+    display: none;
+  }
+}
+
+.example__range-filter {
+  @media (min-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    display: block;
+  }
+}
+
+.example__range-controls .example__scale {
+  height: 6px;
+  background: var(--scale);
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.example__range-controls .example__bar {
+  width: 8px;
+  height: 8px;
+  background-color: var(--basic-green);
+  border-radius: 50%;
+  margin-left: 55%;
+}
+
+.example__range-controls .example__toggle {
+  position: absolute;
+  top: 17px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--scale);
+  background-color: var(--basic-white);
+  border-radius: 50%;
+  cursor: pointer;
+  left: 47%;
+}

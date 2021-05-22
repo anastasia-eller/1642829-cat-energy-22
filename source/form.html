@@ -15,7 +15,7 @@
   </head>
   <body class="page__body">
 
-    <header class="page-header">
+    <header class="page-header page-header__form">
       <a class="page-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1280px)" srcset="img/logo_desktop.svg">
@@ -43,17 +43,18 @@
 
     <main class="page-main">
 
-      <div class="intro intro-form">
+      <div class="intro page-main__intro-form intro-form">
         <h1 class="main-title intro-form__title">Подбор программы</h1>
         <p class="subtitle intro-form__slogan">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
       </div>
 
-      <section class="form">
+      <section class="form page-main__form">
         <div class="form__wrapper">
           <h2 class="visually-hidden">Анкета</h2>
           <form class="form__data" method="get" action="https://echo.htmlacademy.ru">
             <div class="form__up">
-            <fieldset class="cat-data">
+
+              <fieldset class="page-main__cat-data cat-data">
 
               <legend class="visually-hidden">Данные кота</legend>
               <div class="cat-data__wrapper">
@@ -72,7 +73,7 @@
             </div>
             </fieldset>
 
-            <fieldset class="cat-program">
+            <fieldset class="page-main__cat-program cat-program">
 
               <legend class="visually-hidden">Выбор программы</legend>
               <div class="cat-program__wrapper">
@@ -94,28 +95,28 @@
             </fieldset>
             </div>
 
-            <fieldset class="owner-data">
+            <fieldset class="page-main__owner-data owner-data">
               <legend class="owner-data__legend">Контактные данные <br class="owner-data--gap">(владельца кота)</legend>
               <div class="owner-data__wrapper">
               <p class="owner-data__item">
-                <label class="owner-data__label" for="owner_email">E-mail:*</label>
+                <label class="owner-data__label owner-data__label--email" for="owner_email">E-mail:*</label>
                 <input class="owner-data__input input-email" id="owner_email" type="email" placeholder="kuklachev@gmail.com" name="owner email" required>
               </p>
               <p class="owner-data__item">
-                <label class="owner-data__label" for="owner_phone">Телефон:*</label>
+                <label class="owner-data__label owner-data__label--phone" for="owner_phone">Телефон:*</label>
                 <input class="owner-data__input input-phone" id="owner_phone" type="tel" placeholder="8 (960) 900-60-90" name="owner phone" required>
               </p>
               </div>
             </fieldset>
 
-            <fieldset class="comment-data">
+            <fieldset class="page-main__comment-data comment-data">
               <label class="comment-data__label" for="comment">Комментарий</label>
               <div class="comment-data__wrapper">
                 <textarea class="comment-data__text" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
             </fieldset>
 
-            <fieldset class="additional-data">
+            <fieldset class="page-main__additional-data additional-data">
 
               <legend class="additional-data__legend">Дополнительно</legend>
 
@@ -139,7 +140,7 @@
                 </ul>
 
             </fieldset>
-            <div class="submit-data">
+            <div class="page-main__submit-data submit-data">
               <button class="button form__button" type="submit"><span>Отправить заявку</span></button>
               <p class="form__remark">* — Обязательные поля</p>
             </div>
@@ -149,11 +150,11 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <div class="page-footer__wrapper page-footer__wrapper--grey">
         <div class="page-footer__contacts contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <div class="page-footer__background contacts__inner">
-            <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="contacts__text">Приглашаем<br>к сотрудничеству дилеров!</p>
             <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
           </div>
         </div>

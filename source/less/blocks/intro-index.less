@@ -1,20 +1,18 @@
 .intro-index {
   width: 100%;
-  min-height: 563px;
   background-image: url("../img/Index/mobile_background.jpg"), linear-gradient(var(--intro-green) 303px, var(--basic-white) 303px);
   background-position: center top;
   background-repeat: no-repeat;
   padding: 0 20px;
-  position: relative;
 
   @media (min-width: @tablet-width) {
     background-image: none;
     min-height: 768px;
-    padding-left: 117px;
+    padding-left: 147px;
+    z-index: -2;
   }
 
   @media (min-width: @desktop-width) {
-    position: relative;
     min-height: 696px;
 
     &::after {
@@ -23,22 +21,21 @@
       background-color: rgba(104, 183, 56, 0.85);
       width: 50vw;
       height: 694px;
-      right: 0;
+      right: -70px;
       top: -96px;
-      z-index: -2;
     }
   }
 }
 
 .intro__title {
+  width: 250px;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
   color: var(--basic-white);
-  position: relative;
-  top: 28px;
-  padding-bottom: 30px;
+  padding-top: 28px;
+  padding-bottom: 20px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
@@ -69,22 +66,24 @@
 }
 
 .intro-index__img {
-  position: absolute;
-  display: block;
   width: 280px;
   height: 270px;
   left: 50%;
-  transform: translateX(-50%);
 
   @media (min-width: @tablet-width) {
-    width: 709px;
-    height: 609px;
+    width: auto;
+    height: 610px;
     z-index: -1;
+    left: 100px;
+    top: 326px;
+    position: absolute;
   }
 
   @media (min-width: @desktop-width) {
+    top: 21px;
+    left: 488px;
     width: 552px;
-    height: 499px;
+    height: auto;
   }
 }
 

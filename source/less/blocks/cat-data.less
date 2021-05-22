@@ -3,11 +3,15 @@
   position: relative;
   width: 320px;
   padding: 0 20px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: @tablet-width) {
     width: 630px;
     padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
   }
 
   @media (min-width: @tablet-width) {
@@ -19,6 +23,10 @@
   display: flex;
   flex-basis: 100%;
   margin-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .cat-data__label,
@@ -38,6 +46,8 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-top: 10px;
+    margin-right: 19px;
   }
 }
 

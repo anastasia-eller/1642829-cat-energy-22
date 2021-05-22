@@ -9,7 +9,7 @@
     width: 100%;
     background-color: var(--basic-green);
     height: 2px;
-    top: 15px;
+    top: 23px;
     right: 0;
     z-index: -1;
   }
@@ -39,14 +39,17 @@
 .comment-data__wrapper {
   width: 320px;
   padding: 0 20px;
-  margin: 0 auto;
+  margin: 37px auto 0 auto;
 
   @media (min-width: @tablet-width) {
     .tablet-container();
+    padding: 0 40px;
+    margin: 74px auto 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    .desktop-container();
+    width: 1280px;
+    padding: 0 30px;
   }
 }
 

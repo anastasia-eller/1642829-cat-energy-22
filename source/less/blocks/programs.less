@@ -1,7 +1,8 @@
 .programs {
   width: 320px;
   padding: 0 20px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: @tablet-width) {
     .tablet-container();
@@ -28,8 +29,15 @@
   background-color: var(--footer-grey);
   width: 280px;
   min-height: 266px;
-  margin-bottom: 20px;
   position: relative;
+
+  &:first-child {
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 30px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     width: 708px;
@@ -50,8 +58,23 @@
     height: 53px;
     background-image: url("../img/Index/cat_weightloss.svg");
     background-repeat: no-repeat;
-    margin-left: 22px;
+    background-size: cover;
     top: 21px;
+    left: 20px;
+
+    @media (min-width: @tablet-width) {
+      width: 200px;
+      height: 211px;
+      top: 81px;
+      left: 446px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100px;
+      height: 106px;
+      top: 42px;
+      left: 52px;
+    }
   }
 
   &--weightgain::before {
@@ -62,8 +85,23 @@
     height: 50px;
     background-image: url("../img/Index/cat_weight_gain.svg");
     background-repeat: no-repeat;
-    margin-left: 20px;
+    background-size: cover;
+    margin-left: 13px;
     top: 24px;
+
+    @media (min-width: @tablet-width) {
+      width: 268px;
+      height: 200px;
+      top: 91px;
+      left: 400px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 134px;
+      height: 100px;
+      top: 47px;
+      left: 19px;
+    }
   }
 }
 
@@ -72,12 +110,20 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  margin-left: 91px;
-  padding-top: 10px;
+  margin-top: 30px;
+  margin-left: 89px;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin-top: 77px;
+    margin-left: 53px;
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 214px;
   }
 }
 
@@ -110,11 +156,14 @@
     color: var(--black);
     padding-left: 52px;
     padding-right: 279px;
+    margin-bottom: 51px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 50px;
     padding-right: 50px;
+    margin-top: 75px;
+    margin-bottom: 26px;
   }
 }
 
@@ -126,7 +175,7 @@
   color: var(--black);
   width: 227px;
   height: 90px;
-  margin-left: 20px;
+  margin-left: 18px;
   position: relative;
 
   &:active {
@@ -136,6 +185,11 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-left: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 51px;
   }
 }
 
@@ -150,7 +204,11 @@
   left: 100px;
 
   @media (min-width: @tablet-width) {
-    left: 125px;
+    left: 133px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 131px;
   }
 }
 
