@@ -1,5 +1,6 @@
 .order-gift {
   margin-bottom: 60px;
+  position: relative;
 
   &::before {
     content: "";
@@ -8,19 +9,42 @@
     height: 289px;
     background-image: url("../img/catalog/gift_mobile.jpg");
     background-repeat: no-repeat;
+    background-color: var(--basic-green);
     z-index: -1;
-    top: 591px;
-    display: block;
+
+    @media (min-resolution: 2dppx) {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 289px;
+      background-image: url("../img/catalog/gift_mobile@2x.jpg");
+      background-repeat: no-repeat;
+      background-color: var(--basic-green);
+      z-index: -1;
+      background-size: contain;
+    }
 
     @media (min-width: @tablet-width) {
       content: "";
       position: absolute;
       width: 708px;
-      height: 220px;
+      height: 200px;
       background-image: url("../img/catalog/gift_tablet.jpg");
       background-repeat: no-repeat;
+      background-color: var(--basic-green);
       z-index: -1;
-      top: 741px;
+
+      @media (min-resolution: 2dppx) {
+        content: "";
+        position: absolute;
+        width: 708px;
+        height: 200px;
+        background-image: url("../img/catalog/gift_tablet@2x.jpg");
+        background-repeat: no-repeat;
+        background-color: var(--basic-green);
+        z-index: -1;
+        background-size: contain;
+      }
     }
 
     @media (min-width: @desktop-width) {
@@ -30,8 +54,20 @@
       height: 289px;
       background-image: url("../img/catalog/gift_desktop.jpg");
       background-repeat: no-repeat;
+      background-color: var(--basic-green);
       z-index: -1;
-      top: 115px;
+
+      @media (min-resolution: 2dppx) {
+        content: "";
+        position: absolute;
+        width: 245px;
+        height: 289px;
+        background-image: url("../img/catalog/gift_desktop@2x.jpg");
+        background-repeat: no-repeat;
+        background-color: var(--basic-green);
+        z-index: -1;
+        background-size: contain;
+      }
     }
   }
 
@@ -63,6 +99,7 @@
   width: 161px;
 
   @media (min-width: @tablet-width) {
+    margin-top: 72px;
     margin-left: 426px;
     text-align: left;
   }
