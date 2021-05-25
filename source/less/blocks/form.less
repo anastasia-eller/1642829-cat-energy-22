@@ -1,3 +1,38 @@
+.form__up {
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding-left: 70px;
+    padding-right: 67px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-container();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto 48px auto;
+  }
+}
+
+.form__button {
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  display: block;
+  align-self: center;
+  margin-bottom: 7px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    padding: 15px 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 14px 207px;
+  }
+}
+
 .form__remark {
   font-family: "Arial", sans-serif;
   font-weight: 400;
@@ -8,34 +43,5 @@
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
-  }
-}
-
-.form__button {
-  font-size: 16px;
-  line-height: 20px;
-  padding: 10px 80px;
-  border: none;
-  display: block;
-  align-self: center;
-
-  @media (min-width: @desktop-width) {
-    padding: 13px 188px;
-  }
-}
-
-.form__up {
-  @media (min-width: @tablet-width) {
-    width: 768px;
-    padding-left: 70px;
-    padding-right: 67px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .desktop-container();
   }
 }

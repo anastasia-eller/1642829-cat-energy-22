@@ -1,16 +1,13 @@
 .intro-index {
   width: 100%;
-  background-image: url("../img/Index/mobile_background.jpg"), linear-gradient(var(--intro-green) 303px, var(--basic-white) 303px);
+  background-image: url("../img/index/mobile_background.jpg"), linear-gradient(var(--intro-green) 303px, var(--basic-white) 303px);
   background-position: center top;
   background-repeat: no-repeat;
   padding: 0 20px;
 
-  @media (min-resolution: 2dppx) {
-    width: 100%;
-    background-image: url("../img/Index/mobile_background@2x.jpg"), linear-gradient(var(--intro-green) 303px, var(--basic-white) 303px);
-    background-position: center top;
-    background-repeat: no-repeat;
-    padding: 0 20px;
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/index/mobile_background@2x.jpg"), linear-gradient(var(--intro-green) 303px, var(--basic-white) 303px);
     background-size: contain;
   }
 
@@ -27,24 +24,16 @@
     &::after {
       content: "";
       position: absolute;
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/Index/desktop_background.jpg");
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index/desktop_background.jpg");
       background-repeat: no-repeat;
       width: 50vw;
       height: 694px;
       right: -70px;
       top: 0;
 
-      @media (min-resolution: 2dppx) {
-        &::after {
-          content: "";
-          position: absolute;
-          background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/Index/desktop_background@2x.jpg");
-          background-repeat: no-repeat;
-          width: 50vw;
-          height: 694px;
-          right: -70px;
-          top: 0;
-        }
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index/desktop_background@2x.jpg");
       }
     }
   }
@@ -57,8 +46,8 @@
   line-height: 36px;
   text-align: center;
   color: var(--basic-white);
-  padding-top: 28px;
-  padding-bottom: 20px;
+  padding-top: 26px;
+  padding-bottom: 11px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {

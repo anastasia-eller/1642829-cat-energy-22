@@ -1,20 +1,20 @@
 .example {
   width: 100%;
   min-height: 705;
-  margin: 0 auto;
   background-color: var(--example-grey);
-  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
     min-height: 1081px;
     background-image: linear-gradient(to bottom, var(--basic-white) 619px, var(--example-grey) 619px);
     padding: 0 30px;
+    border-top: 1px solid var(--line-grey);
   }
 
   @media (min-width: @desktop-width) {
     min-height: 656px;
     background-image: linear-gradient(to bottom, var(--basic-white) 164px, var(--example-grey) 164px);
     padding: 0 110px;
+    border-top: none;
   }
 }
 
@@ -69,7 +69,7 @@
   line-height: 18px;
   color: var(--grey);
   width: 280px;
-  margin-bottom: 25px;
+  margin-bottom: 9px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
@@ -85,6 +85,8 @@
 }
 
 .example__container {
+  overflow: hidden;
+
   @media (min-width: @tablet-width) {
     .tablet-container();
     display: flex;
@@ -218,7 +220,7 @@
 
   &--before {
     @media (min-width: @tablet-width) {
-      width: 677px;
+      width: 690px;
       height: 520px;
     }
 
@@ -229,7 +231,7 @@
 
   &--after {
     @media (min-width: @tablet-width) {
-      width: 545px;
+      width: 690px;
       height: 520px;
     }
   }
@@ -269,7 +271,7 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  padding: 16px 45px 25px 35px;
+  padding: 2px 45px 35px 35px;
 }
 
 .example__controls::before,
@@ -384,4 +386,5 @@
   border-radius: 50%;
   cursor: pointer;
   left: 47%;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
 }

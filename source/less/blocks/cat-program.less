@@ -7,6 +7,13 @@
   @media (min-width: @tablet-width) {
     border: 1px solid var(--border);
   }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    height: 200px;
+    margin-top: 13px;
+    margin-bottom: 0;
+  }
 }
 
 .cat-program__wrapper {
@@ -23,13 +30,12 @@
   @media (min-width: @desktop-width) {
     width: 568px;
     height: 200px;
-    margin: 0;
   }
 }
 
 .cat-program__list {
   .list-basics();
-  padding: 20px 0;
+  padding: 25px 0;
 
   @media (min-width: @tablet-width) {
     padding: 30px 0;
@@ -37,11 +43,15 @@
 }
 
 .cat-program__item {
-  padding-bottom: 13px;
+  padding-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 23px;
     padding-left: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 45px;
   }
 }
 

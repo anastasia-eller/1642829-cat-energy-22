@@ -8,9 +8,13 @@
     width: 100%;
     background-color: var(--basic-green);
     height: 2px;
-    top: 22px;
+    top: 15px;
     right: 0;
     z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      top: 20px;
+    }
   }
 }
 
@@ -23,6 +27,7 @@
   padding: 0 20px 13px 20px;
   margin-left: calc((100vw - 320px) / 2);
   width: max-content;
+  margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -57,8 +62,10 @@
 }
 
 .goods__all {
+  margin-bottom: 39px;
+
   @media (min-width: @tablet-width) {
-    margin-bottom: 68px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: @desktop-width) {
@@ -153,12 +160,12 @@
 
   @media (min-width: @tablet-width) {
     flex-basis: 10%;
-    text-align: left;
+    text-align: right;
   }
 
   @media (min-width: @desktop-width) {
     flex-basis: 10%;
-    text-align: center;
+    text-align: left;
   }
 }
 
