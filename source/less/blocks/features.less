@@ -7,10 +7,12 @@
 
   @media (min-width: @tablet-width) {
     .tablet-container();
+    padding-bottom: 72px;
   }
 
   @media (min-width: @desktop-width) {
     .desktop-container();
+    padding-bottom: 35px;
   }
 }
 
@@ -138,5 +140,13 @@
         left: 116px;
       }
     }
+  }
+}
+
+.features__gap-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }

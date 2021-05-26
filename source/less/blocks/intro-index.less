@@ -8,18 +8,21 @@
   @media (min-resolution: 144dpi),
     (min-resolution: 1.5dppx) {
     background-image: url("../img/index/mobile_background@2x.jpg"), linear-gradient(var(--intro-green) 303px, var(--basic-white) 303px);
-    background-size: contain;
+    background-size: auto 303px;
   }
 
   @media (min-width: @tablet-width) {
+    padding-left: 87px;
     background-image: none;
     min-height: 768px;
-    padding-left: 147px;
     z-index: -2;
+    width: 708px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
     min-height: 696px;
+    margin: 0;
 
     &::after {
       content: "";
@@ -30,6 +33,7 @@
       height: 694px;
       right: -70px;
       top: 0;
+      z-index: -1;
 
       @media (min-resolution: 144dpi),
         (min-resolution: 1.5dppx) {
@@ -56,7 +60,13 @@
     color: var(--black);
     text-align: left;
     width: 414px;
-    margin: 0;
+    padding-top: 9px;
+    margin: 0 0 29px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 97px;
+    margin-left: 131px;
   }
 }
 
@@ -74,26 +84,34 @@
     line-height: 20px;
     color: var(--black);
     text-align: left;
+    margin: 0 0 49px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 132px;
+    margin-top: 27px;
+    margin-bottom: 53px;
   }
 }
 
 .intro-index__img {
-  width: 280px;
   height: 270px;
-  left: 50%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
 
   @media (min-width: @tablet-width) {
     width: auto;
     height: 610px;
     z-index: -1;
-    left: 100px;
-    top: 326px;
+    left: 57px;
+    top: 340px;
     position: absolute;
   }
 
   @media (min-width: @desktop-width) {
     top: 142px;
-    left: 627px;
+    left: 590px;
     width: 552px;
     height: auto;
     z-index: 1;
@@ -106,9 +124,14 @@
   width: 280px;
 
   @media (min-width: @tablet-width) {
-    padding: 14px 26px;
+    padding: 17px 20px;
     font-size: 20px;
     line-height: 20px;
     margin: 0;
+    width: 238px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 132px;
   }
 }

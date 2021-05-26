@@ -12,7 +12,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    .desktop-container();
+    width: 100%;
+    padding: 0 110px;
   }
 
   &--desktop {
@@ -24,17 +25,18 @@
 
 .social__list {
   .list-basics();
+  padding: 0 41px;
   position: relative;
   margin-top: 48px;
   margin-bottom: 33px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   @media (min-width: @tablet-width) {
     margin-top: 54px;
     margin-bottom: 28px;
-    width: 154px;
+    margin-left: 20px;
   }
 
   &::before {
@@ -91,6 +93,8 @@
   @media (min-width: @tablet-width) {
     width: 23px;
     height: 23px;
+    margin-left: 23px;
+    margin-right: 29px;
   }
 }
 
@@ -105,7 +109,7 @@
   }
 
   &:hover path {
-    fill: var(--basic-white);
+    fill: rgba(0, 0, 0, 0);
     stroke: var(--basic-green);
   }
 }

@@ -12,7 +12,7 @@
 
   @media (min-width: @desktop-width) {
     min-height: 656px;
-    background-image: linear-gradient(to bottom, var(--basic-white) 164px, var(--example-grey) 164px);
+    background-image: linear-gradient(to bottom, var(--basic-white) 180px, var(--example-grey) 180px);
     padding: 0 110px;
     border-top: none;
   }
@@ -37,8 +37,13 @@
 .example__text {
   margin-bottom: 43px;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 78px;
+  }
+
   @media (min-width: @desktop-width) {
     width: 436px;
+    margin-right: 117px;
   }
 }
 
@@ -54,11 +59,13 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    padding-top: 43px;
     margin-bottom: 65px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 149px;
+    padding-top: 60px;
   }
 }
 
@@ -74,13 +81,13 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    width: 708px;
-    margin-bottom: 25px;
+    width: 700px;
+    margin-bottom: 53px;
   }
 
   @media (min-width: @desktop-width) {
     width: 436px;
-    margin-bottom: 54px;
+    margin-bottom: 69px;
   }
 }
 
@@ -88,7 +95,6 @@
   overflow: hidden;
 
   @media (min-width: @tablet-width) {
-    .tablet-container();
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -97,7 +103,6 @@
   @media (min-width: @desktop-width) {
     flex-direction: column;
     padding: 0;
-    margin-top: 10px;
   }
 }
 
@@ -108,7 +113,12 @@
   margin-bottom: 34px;
 
   @media (min-width: @tablet-width) {
-    column-gap: 42px;
+    column-gap: 80px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 47px;
   }
 }
 
@@ -180,21 +190,34 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
+    line-height: 26px;
     width: 174px;
     text-align: right;
+    margin: 8px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 337px;
+    width: 322px;
+  }
+}
+
+.example__gap {
+  @media (min-width: @desktop-width) {
+    margin-left: 50px;
   }
 }
 
 .example__before-after {
-  --example__before-after: 50%;
+  --example__before-after: 100%;
   --psevdo-left: 0;
   max-width: 310px;
   width: 310px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    --example__before-after: 50%;
+    margin-left: 14px;
+  }
 }
 
 .example__top {
@@ -208,7 +231,7 @@
   transition: all 0.3s ease-in-out;
 
   @media (min-width: @tablet-width) {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
   }
 }
 
@@ -222,10 +245,7 @@
     @media (min-width: @tablet-width) {
       width: 690px;
       height: 520px;
-    }
-
-    @media (min-width: @tablet-width) {
-      background-image: linear-gradient(to bottom, var(--basic-white) 164px, var(--example-grey) 164px);
+      background-image: linear-gradient(to bottom, var(--basic-white) 176px, var(--example-grey) 176px);
     }
   }
 
@@ -261,7 +281,7 @@
     }
 
     &:active {
-      border-bottom: 1px solid rgba(0, 0, 0, 1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0);
     }
   }
 }
@@ -271,7 +291,11 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  padding: 2px 45px 35px 35px;
+  padding: 2px 63px 35px 39px;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 61px 35px 47px;
+  }
 }
 
 .example__controls::before,
@@ -288,8 +312,8 @@
   border-radius: 6px;
   background-color: var(--basic-white);
   cursor: pointer;
-  left: 98px;
-  top: 20px;
+  left: 100px;
+  top: 6px;
 }
 
 .example__controls::after {
@@ -298,8 +322,8 @@
   border-radius: 6px;
   background-color: var(--basic-green);
   cursor: pointer;
-  left: 104px;
-  top: 24px;
+  left: 106px;
+  top: 10px;
 }
 
 .example__button::before {
@@ -350,9 +374,7 @@
 }
 
 .example__range-filter {
-  @media (min-width: @mobile-width-only) {
-    display: none;
-  }
+  display: none;
 
   @media (min-width: @tablet-width) {
     width: 428px;
@@ -368,23 +390,25 @@
 }
 
 .example__range-controls .example__bar {
-  width: 8px;
-  height: 8px;
-  background-color: var(--basic-green);
-  border-radius: 50%;
-  margin-left: 55%;
-}
+  display: none;
 
-.example__range-controls .example__toggle {
-  position: absolute;
-  top: 17px;
-  width: 34px;
-  height: 34px;
-  padding: 0;
-  border: 1px solid var(--scale);
-  background-color: var(--basic-white);
-  border-radius: 50%;
-  cursor: pointer;
-  left: 47%;
-  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid var(--scale);
+    background-color: var(--basic-white);
+    background-image: radial-gradient(circle at center, var(--basic-green) 4.5px, var(--basic-white) 4.5px);
+    border-radius: 50%;
+    cursor: pointer;
+    left: 49%;
+    top: 27px;
+    transform: translate(-50%, -50%);
+
+    &:active {
+      border: 1px solid var(--basic-green);
+    }
+  }
 }

@@ -95,6 +95,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: var(--grey);
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -102,21 +103,21 @@
   }
 }
 
-.owner-data__label--email {
-  margin-right: 5px;
+// .owner-data__label--email {
+//   margin-right: 5px;
 
-  @media (min-width: @tablet-width) {
-    margin-right: 15px;
-  }
-}
+//   @media (min-width: @tablet-width) {
+//     margin-right: 15px;
+//   }
+// }
 
-.owner-data__label--phone {
-  margin-right: 5px;
+// .owner-data__label--phone {
+//   margin-right: 5px;
 
-  @media (min-width: @tablet-width) {
-    margin-right: 9px;
-  }
-}
+//   @media (min-width: @tablet-width) {
+//     margin-right: 9px;
+//   }
+// }
 
 .owner-data__input {
   border: 1px solid var(--border);
@@ -148,20 +149,64 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 50px;
+  }
+}
+
+.owner-data__icon {
+  position: absolute;
+  top: 19px;
+  right: 20px;
+}
+
+.owner-data__icon--email {
+  top: 6px;
+  right: 15px;
+
+  @media (min-width: @tablet-width) {
+    top: 8px;
+    right: 20px;
+  }
+
+  &:active path {
+    stroke: var(--basic-green);
+  }
+
+  &:invalid path {
+    stroke: var(--error);
+  }
+}
+
+.owner-data__icon--phone {
+  top: 3px;
+  right: 12px;
+
+  @media (min-width: @tablet-width) {
+    top: 3px;
+    right: 17px;
+  }
+
+  &:active path {
+    fill: var(--basic-green);
+  }
+
+  &:invalid path {
+    fill: var(--error);
   }
 }
 
 .input-email {
   width: 219px;
   height: 46px;
-  background-image: url("../img/form/icon_email.svg");
-  background-repeat: no-repeat;
-  background-position: center right;
+  margin-left: 6px;
+  // background-image: url("../img/form/icon_email.svg");
+  // background-repeat: no-repeat;
+  // background-position: center right 14px;
 
   @media (min-width: @tablet-width) {
     width: 551px;
     height: 52px;
+    margin-left: 16px;
   }
 
   @media (min-width: @desktop-width) {
@@ -172,13 +217,15 @@
 .input-phone {
   width: 204px;
   height: 46px;
-  background-image: url("../img/form/icon_phone.svg");
-  background-repeat: no-repeat;
-  background-position: center right;
+  margin-left: 4px;
+  // background-image: url("../img/form/icon_phone.svg");
+  // background-repeat: no-repeat;
+  // background-position: center right 12px;
 
   @media (min-width: @tablet-width) {
     width: 535px;
     height: 52px;
+    margin-left: 10px;
   }
 
   @media (min-width: @desktop-width) {
