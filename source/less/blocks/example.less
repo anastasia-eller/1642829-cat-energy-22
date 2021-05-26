@@ -12,7 +12,7 @@
 
   @media (min-width: @desktop-width) {
     min-height: 656px;
-    background-image: linear-gradient(to bottom, var(--basic-white) 180px, var(--example-grey) 180px);
+    background-image: linear-gradient(to bottom, var(--basic-white) 176px, var(--example-grey) 176px);
     padding: 0 110px;
     border-top: none;
   }
@@ -406,6 +406,10 @@
     left: 49%;
     top: 27px;
     transform: translate(-50%, -50%);
+
+    &:hover {
+      border: 1px solid var(--hover);
+    }
 
     &:active {
       border: 1px solid var(--basic-green);
