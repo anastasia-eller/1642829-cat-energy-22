@@ -2,14 +2,17 @@
   width: 320px;
   padding: 0 20px;
   counter-reset: description;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: @tablet-width) {
     .tablet-container();
+    padding-bottom: 72px;
   }
 
   @media (min-width: @desktop-width) {
     .desktop-container();
+    padding-bottom: 35px;
   }
 }
 
@@ -18,6 +21,8 @@
   font-size: 36px;
   line-height: 40px;
   color: var(--black);
+  margin-top: 0;
+  margin-bottom: 39px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -33,19 +38,24 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    column-gap: 153px;
-    row-gap: 77px;
+    column-gap: 62px;
+    row-gap: 106px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    column-gap: 94px;
+    column-gap: 79px;
   }
 }
 
 .features__item {
   position: relative;
+  padding-bottom: 26px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 
   &::before {
     content: "";
@@ -66,7 +76,7 @@
   content: "";
   position: absolute;
   display: block;
-  background-image: url("../img/Index/icon_leaf.svg");
+  background-image: url("../img/index/icon_leaf.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -75,7 +85,7 @@
   content: "";
   position: absolute;
   display: block;
-  background-image: url("../img/Index/icon_tub.svg");
+  background-image: url("../img/index/icon_tub.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -84,7 +94,7 @@
   content: "";
   position: absolute;
   display: block;
-  background-image: url("../img/Index/icon_eat.svg");
+  background-image: url("../img/index/icon_eat.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -93,7 +103,7 @@
   content: "";
   position: absolute;
   display: block;
-  background-image: url("../img/Index/icon_alarm.svg");
+  background-image: url("../img/index/icon_alarm.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -104,9 +114,10 @@
   font-size: 14px;
   line-height: 18px;
   color: var(--grey);
-  padding-bottom: 24px;
+  padding-bottom: 0;
   padding-left: 80px;
   position: relative;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
@@ -124,6 +135,18 @@
       z-index: -1;
       top: -40px;
       left: 100px;
+
+      @media (min-width: @tablet-width) {
+        left: 116px;
+      }
     }
+  }
+}
+
+.features__gap-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }

@@ -2,6 +2,8 @@
   .fieldset-basics();
   position: relative;
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 
   &::after {
     content: "";
@@ -9,9 +11,47 @@
     width: 100%;
     background-color: var(--basic-green);
     height: 2px;
-    top: -12px;
+    top: -53px;
     right: 0;
     z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      top: -30px;
+    }
+  }
+}
+
+.owner-data__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 320px;
+  padding: 0 20px;
+  margin: 18px auto 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding-left: 70px;
+    margin: 60px auto 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1440px;
+    padding: 0 111px;
+  }
+}
+
+.owner-data__item {
+  margin: 0;
+
+  &:first-child {
+    margin-bottom: 13px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 21px;
+    }
   }
 }
 
@@ -23,43 +63,23 @@
   background-color: var(--basic-white);
   padding: 0 20px;
   margin-left: calc((100vw - 320px) / 2);
+  margin-bottom: 16px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
     padding: 0 40px;
-    margin-left: calc((100vw - 768px) / 2);
+    margin-left: calc((100vw - 704px) / 2);
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: calc((100vw - 1280px) / 2);
+    margin-left: calc((100vw - 1296px) / 2);
   }
 }
 
 .owner-data--gap {
   @media (min-width: @tablet-width) {
     display: none;
-  }
-}
-
-.owner-data__wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 320px;
-  padding: 0 20px;
-  margin: 0 auto;
-
-  @media (min-width: @tablet-width) {
-    width: 768px;
-    padding-left: 70px;
-  }
-
-  @media (min-width: @desktop-width) {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 1440px;
-    padding: 0 111px;
   }
 }
 
@@ -74,14 +94,30 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  margin-right: 5px;
   color: var(--grey);
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
   }
 }
+
+// .owner-data__label--email {
+//   margin-right: 5px;
+
+//   @media (min-width: @tablet-width) {
+//     margin-right: 15px;
+//   }
+// }
+
+// .owner-data__label--phone {
+//   margin-right: 5px;
+
+//   @media (min-width: @tablet-width) {
+//     margin-right: 9px;
+//   }
+// }
 
 .owner-data__input {
   border: 1px solid var(--border);
@@ -98,6 +134,10 @@
   &:invalid:not(:placeholder-shown) {
     border: 2px solid var(--error);
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 20px;
+  }
 }
 
 .owner-data__input::placeholder {
@@ -109,20 +149,66 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 50px;
+  }
+}
+
+.owner-data__icon {
+  position: absolute;
+  top: 19px;
+  right: 20px;
+}
+
+.owner-data__icon--email {
+  top: 6px;
+  right: 15px;
+
+  @media (min-width: @tablet-width) {
+    top: 8px;
+    right: 20px;
+  }
+
+  &:active line,
+  &:active path {
+    stroke: var(--basic-green);
+  }
+
+  &:invalid line,
+  &:invalid path {
+    stroke: var(--error);
+  }
+}
+
+.owner-data__icon--phone {
+  top: 3px;
+  right: 12px;
+
+  @media (min-width: @tablet-width) {
+    top: 3px;
+    right: 17px;
+  }
+
+  &:active path {
+    fill: var(--basic-green);
+  }
+
+  &:invalid path {
+    fill: var(--error);
   }
 }
 
 .input-email {
   width: 219px;
   height: 46px;
-  background-image: url("../img/form/icon_email.svg");
-  background-repeat: no-repeat;
-  background-position: center right;
+  margin-left: 6px;
+  // background-image: url("../img/form/icon_email.svg");
+  // background-repeat: no-repeat;
+  // background-position: center right 14px;
 
   @media (min-width: @tablet-width) {
     width: 551px;
     height: 52px;
+    margin-left: 16px;
   }
 
   @media (min-width: @desktop-width) {
@@ -133,13 +219,15 @@
 .input-phone {
   width: 204px;
   height: 46px;
-  background-image: url("../img/form/icon_phone.svg");
-  background-repeat: no-repeat;
-  background-position: center right;
+  margin-left: 4px;
+  // background-image: url("../img/form/icon_phone.svg");
+  // background-repeat: no-repeat;
+  // background-position: center right 12px;
 
   @media (min-width: @tablet-width) {
     width: 535px;
     height: 52px;
+    margin-left: 10px;
   }
 
   @media (min-width: @desktop-width) {

@@ -1,14 +1,17 @@
 .programs {
   width: 320px;
   padding: 0 20px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: @tablet-width) {
-    .tablet-container();
+    width: 768px;
+    padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
-    .desktop-container();
+    width: 1280px;
+    padding: 0 30px;
   }
 }
 
@@ -28,8 +31,15 @@
   background-color: var(--footer-grey);
   width: 280px;
   min-height: 266px;
-  margin-bottom: 20px;
   position: relative;
+
+  &:first-child {
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 30px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     width: 708px;
@@ -48,10 +58,25 @@
     display: block;
     width: 50px;
     height: 53px;
-    background-image: url("../img/Index/cat_weightloss.svg");
+    background-image: url("../img/index/cat_weightloss.svg");
     background-repeat: no-repeat;
-    margin-left: 22px;
-    top: 21px;
+    background-size: cover;
+    top: 24px;
+    left: 23px;
+
+    @media (min-width: @tablet-width) {
+      width: 200px;
+      height: 211px;
+      top: 81px;
+      left: 446px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100px;
+      height: 106px;
+      top: 42px;
+      left: 52px;
+    }
   }
 
   &--weightgain::before {
@@ -60,10 +85,25 @@
     display: block;
     width: 67px;
     height: 50px;
-    background-image: url("../img/Index/cat_weight_gain.svg");
+    background-image: url("../img/index/cat_weight_gain.svg");
     background-repeat: no-repeat;
-    margin-left: 20px;
-    top: 24px;
+    background-size: cover;
+    margin-left: 14px;
+    top: 26px;
+
+    @media (min-width: @tablet-width) {
+      width: 268px;
+      height: 200px;
+      top: 91px;
+      left: 400px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 134px;
+      height: 100px;
+      top: 47px;
+      left: 19px;
+    }
   }
 }
 
@@ -72,12 +112,20 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  margin-top: 32px;
   margin-left: 91px;
-  padding-top: 10px;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin-top: 77px;
+    margin-left: 53px;
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 214px;
   }
 }
 
@@ -97,7 +145,7 @@
     border-bottom: 1px solid var(--blocks-grey);
     width: 240px;
     top: 112px;
-    left: 0;
+    left: 21px;
 
     @media (min-width: @tablet-width) {
       display: none;
@@ -110,11 +158,26 @@
     color: var(--black);
     padding-left: 52px;
     padding-right: 279px;
+    margin-bottom: 51px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 50px;
     padding-right: 50px;
+    margin-top: 75px;
+    margin-bottom: 26px;
+  }
+}
+
+.programs__gap-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
@@ -136,13 +199,18 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-left: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 51px;
   }
 }
 
 .programs__link::after {
   content: "";
   position: absolute;
-  background-image: url("../img/Index/arrow.svg");
+  background-image: url("../img/index/arrow.svg");
   background-repeat: no-repeat;
   width: 24px;
   height: 12px;
@@ -150,28 +218,48 @@
   left: 100px;
 
   @media (min-width: @tablet-width) {
-    left: 125px;
+    left: 130px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 131px;
   }
 }
 
 .programs__link:hover::after {
   content: "";
   position: absolute;
-  background-image: url("../img/Index/arrow_hover.svg");
+  background-image: url("../img/index/arrow_hover.svg");
   background-repeat: no-repeat;
   width: 35px;
   height: 12px;
   top: 6px;
   left: 100px;
+
+  @media (min-width: @tablet-width) {
+    left: 130px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 131px;
+  }
 }
 
 .programs__link:active::after {
   content: "";
   position: absolute;
-  background-image: url("../img/Index/arrow_hover.svg");
+  background-image: url("../img/index/arrow_hover.svg");
   background-repeat: no-repeat;
   width: 35px;
   height: 12px;
   top: 6px;
   left: 100px;
+
+  @media (min-width: @tablet-width) {
+    left: 130px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 131px;
+  }
 }

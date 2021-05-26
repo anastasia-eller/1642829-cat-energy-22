@@ -3,15 +3,20 @@
   position: relative;
   width: 320px;
   padding: 0 20px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: @tablet-width) {
     width: 630px;
     padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     width: 570px;
+    margin: 0;
   }
 }
 
@@ -19,6 +24,10 @@
   display: flex;
   flex-basis: 100%;
   margin-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .cat-data__label,
@@ -33,11 +42,14 @@
   line-height: 18px;
   color: var(--grey);
   text-transform: uppercase;
+  margin-top: 12px;
   margin-right: 15px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-top: 10px;
+    margin-right: 19px;
   }
 }
 
@@ -67,12 +79,12 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 50px;
   }
 }
 
 .input-name {
-  width: 208px;
+  width: 229px;
   height: 43px;
 
   @media (min-width: @tablet-width) {
@@ -86,7 +98,7 @@
 }
 
 .input-weight {
-  width: 185px;
+  width: 204px;
   height: 43px;
 
   @media (min-width: @tablet-width) {
@@ -100,11 +112,11 @@
 }
 
 .input-age {
-  width: 153px;
+  width: 172px;
   height: 43px;
 
   @media (min-width: @tablet-width) {
-    width: 497px;
+    width: 494px;
     height: 52px;
   }
 

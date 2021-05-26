@@ -1,18 +1,23 @@
+
 .main-nav__list {
   .list-basics();
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    min-width: 440px;
+    width: 440px;
+    padding: 0;
+    margin-top: 2px;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 478px;
+    width: 478px;
   }
 }
 
@@ -21,23 +26,25 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-  padding-top: 17px;
-  padding-bottom: 8px;
+  padding-top: 21px;
+  padding-bottom: 24px;
   text-align: center;
+  border-bottom: 1px solid var(--menu-lines);
 
-  // @media (min-width: @mobile-width-only) {
-  //   content: "";
-  //   position: absolute;
-  //   width: 320px;
-  //   border-bottom: 1px solid var(--menu-lines);
-  //   left: 0;
-  //   top: 131px;
-  // }
+  &:first-child {
+    border-top: 1px solid var(--menu-lines);
+  }
 
   @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+    padding: 9px 0 5px;
+    border-bottom: none;
+
+    &:first-child {
+      border-top: none;
+    }
 
     &--active {
       border-bottom: 2px solid var(--basic-green);
@@ -47,6 +54,10 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
+
+    &--white {
+      border-bottom: 2px solid var(--basic-white);
+    }
   }
 }
 
@@ -62,15 +73,9 @@
   }
 }
 
-.main-nav--white {
+.main-nav__list--white .main-nav__link {
   @media (min-width: @desktop-width) {
     color: var(--basic-white);
-  }
-}
-
-.main-nav__item--white .main-nav__link {
-  @media (min-width: @desktop-width) {
-    border-bottom: 2px solid var(--basic-white);
   }
 }
 
@@ -82,7 +87,7 @@
   background-color: var(--basic-white);
   background-image: url("../img/menu_close.svg");
   background-repeat: no-repeat;
-  border: 0;
+  border: none;
   top: 21px;
   left: 279px;
 
@@ -94,13 +99,13 @@
 .main-nav--closed .main-nav__toggle {
   content: "";
   position: absolute;
-  top: 35px;
-  right: 26px;
+  top: 22px;
+  right: 21px;
   width: 24px;
   height: 1.5px;
   background-color: var(--black);
   box-shadow: 0 8px 0 0 var(--black), 0 16px 0 0 var(--black);
-  border: 0;
+  border: none;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -111,4 +116,14 @@
   @media (max-width: @mobile-width-only) {
     display: none;
   }
+}
+
+.main-nav--nojs .main-nav__list {
+  @media (max-width: @mobile-width-only) {
+    display: block;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
 }
