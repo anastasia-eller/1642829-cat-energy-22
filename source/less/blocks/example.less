@@ -13,7 +13,7 @@
   @media (min-width: @desktop-width) {
     min-height: 656px;
     background-image: linear-gradient(to bottom, var(--basic-white) 176px, var(--example-grey) 176px);
-    padding: 0 110px;
+    padding: 0;
     border-top: none;
   }
 }
@@ -296,6 +296,10 @@
   @media (min-width: @tablet-width) {
     padding: 10px 61px 35px 47px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 31px 29px 33px 79px;
+  }
 }
 
 .example__controls::before,
@@ -406,6 +410,11 @@
     left: 49%;
     top: 27px;
     transform: translate(-50%, -50%);
+
+    @media (min-width: @desktop-width) {
+      left: 50%;
+      top: 49px;
+    }
 
     &:hover {
       border: 1px solid var(--hover);

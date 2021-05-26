@@ -17,12 +17,13 @@
     min-height: 768px;
     z-index: -2;
     width: 708px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 696px;
-    margin: 0;
+    width: 100%;
+    min-height: 560px;
 
     &::after {
       content: "";
@@ -31,7 +32,7 @@
       background-repeat: no-repeat;
       width: 50vw;
       height: 694px;
-      right: -70px;
+      right: 0;
       top: 0;
       z-index: -1;
 
@@ -67,7 +68,8 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 97px;
-    margin-left: 131px;
+    margin-left: 103px;
+    margin-right: 0;
   }
 }
 
@@ -89,7 +91,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 132px;
+    margin-left: 103px;
     margin-top: 27px;
     margin-bottom: 53px;
   }
@@ -112,7 +114,7 @@
 
   @media (min-width: @desktop-width) {
     top: 142px;
-    left: 590px;
+    left: 557px;
     width: 552px;
     height: auto;
     z-index: 1;
@@ -133,6 +135,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 132px;
+    margin-left: 103px;
   }
 }
